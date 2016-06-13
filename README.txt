@@ -1,1 +1,1 @@
-# leitfaden-tierwohl
+# Leitfaden Tierwohl
