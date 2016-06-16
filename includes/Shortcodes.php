@@ -100,34 +100,35 @@ class Shortcodes {
 			} else {
 				$src = $_SESSION['records']['media'][$_SESSION['q']-1]['src'];
 
-				$ret .= '<strong>' . $_SESSION['records']['question'] . '</strong>';
-				$ret .= '<br />';
+				$ret .= '<h3>' . $_SESSION['records']['question'] . '</h3>';
+
+				if ( $_SESSION['records']['media'][$_SESSION['q']-1]['desc'] ) {
+					$ret .= '<strong>Hinweis:</strong> ' . $_SESSION['records']['media'][$_SESSION['q']-1]['desc'] .
+					        '<br /><br />';
+				}
 
 				if ( strpos( strtolower( $src ), 'youtube' ) > 0 ) {
 					$ret .= '<iframe width="560" height="315" src="' . $src . '" frameborder="0" allowfullscreen></iframe>';
 				} else {
 					//$ret .= '<img src="' . LEITFADENTIERWOHL_ROOT_URL . $src . '" />';
-					$ret .= '<img src="/wp-content/plugins/leitfaden-tierwohl/' . $src . '" />';
+					$ret .= '<img src="/wp-content/plugins/leitfaden-tierwohl/' . $src . '" style="width: 100%;" />';
 				}
 
 				$ret .= '<br />' .
-				        $_SESSION['records']['media'][$_SESSION['q']-1]['desc'] .
-				        '<br />' .
-				        $_SESSION['q'] . ' / ' . count( $_SESSION['records']['media'] ) .
-				        '<br />
-				<form method="POST" action="' . $post->post_name . '">';
+				        '<div style="text-align: right;">' . $_SESSION['q'] . ' / ' . count( $_SESSION['records']['media'] ) . '</div>' .
+				        '<form method="POST" action="' . $post->post_name . '">';
 
 				if ( $_SESSION['s'] === self::SAVE ) {
 					$ret .= '
 					<input type="radio" id="lftw_yes" name="lftw_answer" value="1" required="required" /> <label for="lftw_yes">Ja</label>
 					<br />
 					<input type="radio" id="lftw_no" name="lftw_answer" value="0" required="required" /> <label for="lftw_no">Nein</label>
-					<br />';
+					<br /><br />';
 				} else {
 					$ret .= 'Deine Antwort: ' . constant( 'Schenkenfelder\LeitfadenTierwohl\Shortcodes::ANSWER_' . $_POST['lftw_answer'] ) . ', richtige Antwort: ' . constant( 'Schenkenfelder\LeitfadenTierwohl\Shortcodes::ANSWER_' . $_SESSION['a'] ) . '.';
 					$ret .= '<br />';
-					$ret .= 'Lösung: ' . $_SESSION['records']['media'][$_SESSION['q']-1]['err'];
-					$ret .= '<br />';
+					$ret .= '<strong>Lösung:</strong> ' . $_SESSION['records']['media'][$_SESSION['q']-1]['err'];
+					$ret .= '<br /><br />';
 				}
 
 				$ret .= '

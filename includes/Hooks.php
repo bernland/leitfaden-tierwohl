@@ -24,4 +24,8 @@ class Hooks {
 
 	}
 
+	public static function edit_post_link() {
+		return '';
+	}
+
 }

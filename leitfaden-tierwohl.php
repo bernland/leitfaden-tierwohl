@@ -30,7 +30,7 @@ register_activation_hook( __FILE__, array( 'Schenkenfelder\\LeitfadenTierwohl\\H
 add_filter( 'show_admin_bar', '__return_false' );
 
 // Remove edit link
-add_filter( 'edit_post_link', array( 'Schenkenfelder\\LeitfadenTierwohl\\Shortcodes', 'edit_post_link' ) );
+add_filter( 'edit_post_link', array( 'Schenkenfelder\\LeitfadenTierwohl\\Hooks', 'edit_post_link' ) );
 
 // Shortcode
 if( !shortcode_exists( 'leitfaden_tierwohl' ) ) {
