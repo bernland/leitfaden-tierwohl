@@ -1,0 +1,119 @@
+.lftw_form_legend {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.lftw_form_header {
+	display: block;
+	margin-bottom: 5px !important;
+}
+
+.lftw_since {
+	color: #000 !important;
+	width: 100px !important;
+}
+
+.lftw_other {
+	color: #000 !important;
+	width: 300px !important;
+}
+
+.lftw_other_radio {
+	opacity: 1;
+}
+
+#lftw_form_userbg_8-1,
+#lftw_form_userbg_9-1-2 {
+	display: none;
+}
+
+.lftw_image {
+	width: 100%;
+}
+
+.lftw_pagination {
+	width: 100%;
+	text-align: right;
+}
+
+.lftw_result {
+	padding-bottom: 2px;
+}
+
+.lftw_border {
+	padding: 1px 3px 0;
+	border: 1px solid black;
+}
+
+.lftw_hidden {
+	opacity: .5;
+}
+
+.lftw_solution {
+	margin-top: 10px;
+}
+
+.lftw_submit {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+@media screen and (min-width: 44.375em) {
+	.lftw_question {
+		padding-top: 30px !important;
+	}
+}
+
+@media screen and (min-width: 56.875em) {
+	.lftw_left {
+		float: left;
+		width: 60%;
+	}
+
+	.lftw_right {
+		float: left;
+		width: 37%;
+		margin-left: 3%;
+	}
+
+	.page-id-90.no-sidebar .entry-header,
+	.page-id-90.no-sidebar .entry-content,
+	.page-id-92.no-sidebar .entry-header,
+	.page-id-92.no-sidebar .entry-content,
+	.page-id-94.no-sidebar .entry-header,
+	.page-id-94.no-sidebar .entry-content,
+	.page-id-96.no-sidebar .entry-header,
+	.page-id-96.no-sidebar .entry-content,
+	.page-id-98.no-sidebar .entry-header,
+	.page-id-98.no-sidebar .entry-content,
+	.page-id-100.no-sidebar .entry-header,
+	.page-id-100.no-sidebar .entry-content,
+	.page-id-102.no-sidebar .entry-header,
+	.page-id-102.no-sidebar .entry-content,
+	.page-id-104.no-sidebar .entry-header,
+	.page-id-104.no-sidebar .entry-content,
+	.page-id-106.no-sidebar .entry-header,
+	.page-id-106.no-sidebar .entry-content,
+	.page-id-108.no-sidebar .entry-header,
+	.page-id-108.no-sidebar .entry-content {
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+	}
+
+	.menu-navigation-container {
+		border: 5px solid black;
+	}
+}
+
+.tablepress tbody td,
+.tablepress tfoot th {
+	border-top: none !important;
+}
+
+#tablepress-1 {
+	width: auto;
+}
+
+iframe {
+	margin-bottom: 0 !important;
+}
